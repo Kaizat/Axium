@@ -129,6 +129,16 @@ async def internal_error_handler(request: Request, exc: Exception):
         content={"error": "Internal server error", "detail": error_detail}
     )
 
+@app.exception_handler(Exception)
+async def general_exception_handler(request: Request, exc: Exception):
+    """Handle any other exceptions"""
+    from fastapi.responses import JSONResponse
+    error_detail = str(exc) if hasattr(exc, '__str__') else "Unknown error"
+    return JSONResponse(
+        status_code=500,
+        content={"error": "Unexpected error", "detail": error_detail}
+    )
+
 if __name__ == "__main__":
     import uvicorn
     
