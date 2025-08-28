@@ -13,7 +13,7 @@ class GeminiService:
             raise ValueError("gemini_key environment variable is required")
         
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-pro')
+        self.model = genai.GenerativeModel('gemini-2.0-flash')
         
     def generate_recipes(self, ingredients: List[str]) -> RecipeResponse:
         """Generate recipes using Gemini AI based on available ingredients"""
