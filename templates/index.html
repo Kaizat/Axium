@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍳 Smart Recipe Analyzer</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-utensils"></i>
+                    Smart Recipe Analyzer
+                </h1>
+                <p class="tagline">Transform your ingredients into delicious recipes with AI</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="card">
+                    <h2><i class="fas fa-search"></i> What ingredients do you have?</h2>
+                    <p class="instruction">Enter your available ingredients separated by commas</p>
+                    
+                    <form id="recipeForm" class="recipe-form">
+                        <div class="form-group">
+                            <textarea 
+                                id="ingredientsInput" 
+                                name="ingredients" 
+                                placeholder="e.g., chicken, rice, vegetables, garlic, olive oil"
+                                rows="4"
+                                required
+                            ></textarea>
+                            <div class="form-help">
+                                <i class="fas fa-info-circle"></i>
+                                Enter ingredients separated by commas. The AI will suggest recipes using what you have!
+                            </div>
+                        </div>
+                        
+                        <button type="submit" id="generateBtn" class="btn btn-primary">
+                            <i class="fas fa-magic"></i>
+                            Generate Recipes
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Loading Section -->
+            <section id="loadingSection" class="loading-section hidden">
+                <div class="card">
+                    <div class="loading-content">
+                        <div class="spinner"></div>
+                        <h3>Creating your recipes...</h3>
+                        <p>The AI is analyzing your ingredients and generating creative recipe suggestions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="resultsSection" class="results-section hidden">
+                <div class="card">
+                    <div class="results-header">
+                        <h2><i class="fas fa-utensils"></i> Your Recipe Suggestions</h2>
+                        <button id="newSearchBtn" class="btn btn-secondary">
+                            <i class="fas fa-plus"></i>
+                            New Search
+                        </button>
+                    </div>
+                    
+                    <div id="recipesContainer" class="recipes-container">
+                        <!-- Recipes will be dynamically inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section id="errorSection" class="error-section hidden">
+                <div class="card error-card">
+                    <div class="error-content">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3 id="errorTitle">Something went wrong</h3>
+                        <p id="errorMessage">We couldn't generate recipes at this time.</p>
+                        <button id="retryBtn" class="btn btn-primary">
+                            <i class="fas fa-redo"></i>
+                            Try Again
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sample Recipes Section -->
+            <section class="sample-section">
+                <div class="card">
+                    <h2><i class="fas fa-lightbulb"></i> Try it out!</h2>
+                    <p>Test the app with these sample ingredients:</p>
+                    <div class="sample-ingredients">
+                        <button class="sample-btn" data-ingredients="chicken, rice, vegetables">
+                            <i class="fas fa-drumstick-bite"></i>
+                            Chicken & Rice
+                        </button>
+                        <button class="sample-btn" data-ingredients="pasta, garlic, olive oil, parmesan">
+                            <i class="fas fa-pizza-slice"></i>
+                            Pasta Dish
+                        </button>
+                        <button class="sample-btn" data-ingredients="eggs, milk, bread, cheese">
+                            <i class="fas fa-egg"></i>
+                            Breakfast
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Smart Recipe Analyzer. Powered by Google Gemini AI.</p>
+        </div>
+    </footer>
+
+    <!-- Recipe Template (Hidden) -->
+    <template id="recipeTemplate">
+        <div class="recipe-card">
+            <div class="recipe-header">
+                <h3 class="recipe-name"></h3>
+                <div class="recipe-meta">
+                    <span class="cooking-time">
+                        <i class="fas fa-clock"></i>
+                        <span class="time-text"></span>
+                    </span>
+                    <span class="difficulty">
+                        <i class="fas fa-star"></i>
+                        <span class="difficulty-text"></span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="recipe-content">
+                <div class="recipe-ingredients">
+                    <h4><i class="fas fa-list"></i> Ingredients</h4>
+                    <ul class="ingredients-list"></ul>
+                </div>
+                
+                <div class="recipe-instructions">
+                    <h4><i class="fas fa-tasks"></i> Instructions</h4>
+                    <ol class="instructions-list"></ol>
+                </div>
+                
+                <div class="recipe-nutrition">
+                    <h4><i class="fas fa-chart-pie"></i> Nutrition (per serving)</h4>
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">Calories</span>
+                            <span class="nutrition-value calories"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">Protein</span>
+                            <span class="nutrition-value protein"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">Carbs</span>
+                            <span class="nutrition-value carbs"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Scripts -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

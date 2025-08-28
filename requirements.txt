@@ -1,0 +1,45 @@
+# Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# HTTP Requests
+httpx==0.25.2
+requests==2.31.0
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Google Gemini API Integration
+google-generativeai==0.3.2
+
+# JSON Handling
+jsonschema==4.19.2
+
+# Data Validation
+pydantic==2.4.2
+
+# CORS Support
+# Built-in with FastAPI
+
+# Development Server
+# uvicorn included above
+
+# Environment Management
+python-dotenv==1.0.0
+
+# Optional: For enhanced features
+# Image Processing (for DALL-E integration)
+# Pillow==10.0.1
+
+# Database (for recipe history feature)
+# sqlite3  # Built-in with Python
+
+# Optional: For advanced features
+# Recipe Rating System
+# No additional packages needed - can use built-in Python features
+
+# Optional: For dietary restrictions
+# Can be handled with built-in Python logic
+
+# Optional: For ingredient substitutions
+# Can be handled with built-in Python logic
