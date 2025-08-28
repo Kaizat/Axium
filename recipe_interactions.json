@@ -212,6 +212,336 @@
         "error_message": null,
         "processing_status": "success"
       }
+    },
+    {
+      "interaction_id": "recipe_interaction_20250828_160448",
+      "timestamp": "2025-08-28T16:04:48.013054",
+      "user_input": {
+        "ingredients": [
+          "egg",
+          "rice",
+          "brocholi",
+          "tomato"
+        ],
+        "ingredient_count": 4
+      },
+      "llm_interaction": {
+        "raw_response": "```json\n{\n  \"recipes\": [\n    {\n      \"name\": \"Broccoli Tomato Fried Rice with Egg\",\n      \"ingredients\": [\"1 cup cooked rice (brown or white)\", \"1 cup broccoli florets\", \"1/2 cup diced tomato\", \"2 eggs\", \"1 tbsp soy sauce (low sodium)\", \"1 tsp sesame oil\", \"1/4 cup chopped onion (optional)\", \"1 clove garlic, minced (optional)\", \"Salt and pepper to taste\"],\n      \"instructions\": [\"Whisk eggs with salt and pepper. Scramble in a pan with a little oil and set aside.\", \"If using onion and garlic, saute them in the same pan until softened.\", \"Add broccoli florets and cook until slightly tender-crisp (about 3-5 minutes).\", \"Add diced tomato and cook for another 2 minutes.\", \"Add cooked rice, soy sauce, and sesame oil. Stir well to combine.\", \"Add the scrambled eggs back into the pan. Mix everything together.\", \"Serve hot.\"],\n      \"cookingTime\": \"15 minutes\",\n      \"difficulty\": \"Easy\",\n      \"nutrition\": {\n        \"calories\": 350,\n        \"protein\": \"15g\",\n        \"carbs\": \"45g\"\n      }\n    },\n    {\n      \"name\": \"Broccoli Rice Frittata with Tomato Salsa\",\n      \"ingredients\": [\"4 eggs\", \"1/2 cup cooked rice\", \"1/2 cup chopped broccoli florets\", \"1/4 cup diced tomato\", \"1/4 cup shredded cheddar cheese (optional)\", \"Salt and pepper to taste\", \"Olive oil\"],\n      \"instructions\": [\"Preheat oven to 375°F (190°C).\", \"In a bowl, whisk eggs with salt and pepper.\", \"Stir in cooked rice, broccoli florets, and diced tomato.\", \"Heat a small amount of olive oil in an oven-safe skillet over medium heat.\", \"Pour the egg mixture into the skillet. Cook for 5-7 minutes, or until the edges begin to set.\", \"Sprinkle with cheddar cheese (if using).\", \"Transfer the skillet to the preheated oven and bake for 10-15 minutes, or until the frittata is set and golden brown.\", \"Let cool slightly before slicing and serving.\"],\n      \"cookingTime\": \"30 minutes\",\n      \"difficulty\": \"Medium\",\n      \"nutrition\": {\n        \"calories\": 280,\n        \"protein\": \"20g\",\n        \"carbs\": \"15g\"\n      }\n    },\n    {\n      \"name\": \"Egg and Rice Stuffed Tomatoes with Broccoli Garnish\",\n      \"ingredients\": [\"2 large ripe tomatoes\", \"1 cup cooked rice\", \"1 hard-boiled egg, chopped\", \"1/4 cup finely chopped broccoli florets\", \"1 tbsp mayonnaise (optional)\", \"Salt and pepper to taste\", \"Fresh basil leaves (for garnish)\"],\n      \"instructions\": [\"Cut the tops off the tomatoes and scoop out the pulp (reserve for another use).\", \"In a bowl, combine cooked rice, chopped hard-boiled egg, finely chopped broccoli, mayonnaise (if using), salt, and pepper. Mix well.\", \"Fill the hollowed-out tomatoes with the rice and egg mixture.\", \"Garnish with fresh basil leaves.\", \"Serve chilled or at room temperature.\"],\n      \"cookingTime\": \"20 minutes\",\n      \"difficulty\": \"Easy\",\n      \"nutrition\": {\n        \"calories\": 200,\n        \"protein\": \"8g\",\n        \"carbs\": \"25g\"\n      }\n    }\n  ]\n}\n```",
+        "response_length": 2877,
+        "response_type": "str"
+      },
+      "parsed_output": {
+        "recipes": [
+          {
+            "name": "Broccoli Tomato Fried Rice with Egg",
+            "ingredients": [
+              "1 cup cooked rice (brown or white)",
+              "1 cup broccoli florets",
+              "1/2 cup diced tomato",
+              "2 eggs",
+              "1 tbsp soy sauce (low sodium)",
+              "1 tsp sesame oil",
+              "1/4 cup chopped onion (optional)",
+              "1 clove garlic, minced (optional)",
+              "Salt and pepper to taste"
+            ],
+            "instructions": [
+              "Whisk eggs with salt and pepper. Scramble in a pan with a little oil and set aside.",
+              "If using onion and garlic, saute them in the same pan until softened.",
+              "Add broccoli florets and cook until slightly tender-crisp (about 3-5 minutes).",
+              "Add diced tomato and cook for another 2 minutes.",
+              "Add cooked rice, soy sauce, and sesame oil. Stir well to combine.",
+              "Add the scrambled eggs back into the pan. Mix everything together.",
+              "Serve hot."
+            ],
+            "cookingTime": "15 minutes",
+            "difficulty": "Easy",
+            "nutrition": {
+              "calories": 350,
+              "protein": "15g",
+              "carbs": "45g"
+            }
+          },
+          {
+            "name": "Broccoli Rice Frittata with Tomato Salsa",
+            "ingredients": [
+              "4 eggs",
+              "1/2 cup cooked rice",
+              "1/2 cup chopped broccoli florets",
+              "1/4 cup diced tomato",
+              "1/4 cup shredded cheddar cheese (optional)",
+              "Salt and pepper to taste",
+              "Olive oil"
+            ],
+            "instructions": [
+              "Preheat oven to 375°F (190°C).",
+              "In a bowl, whisk eggs with salt and pepper.",
+              "Stir in cooked rice, broccoli florets, and diced tomato.",
+              "Heat a small amount of olive oil in an oven-safe skillet over medium heat.",
+              "Pour the egg mixture into the skillet. Cook for 5-7 minutes, or until the edges begin to set.",
+              "Sprinkle with cheddar cheese (if using).",
+              "Transfer the skillet to the preheated oven and bake for 10-15 minutes, or until the frittata is set and golden brown.",
+              "Let cool slightly before slicing and serving."
+            ],
+            "cookingTime": "30 minutes",
+            "difficulty": "Medium",
+            "nutrition": {
+              "calories": 280,
+              "protein": "20g",
+              "carbs": "15g"
+            }
+          },
+          {
+            "name": "Egg and Rice Stuffed Tomatoes with Broccoli Garnish",
+            "ingredients": [
+              "2 large ripe tomatoes",
+              "1 cup cooked rice",
+              "1 hard-boiled egg, chopped",
+              "1/4 cup finely chopped broccoli florets",
+              "1 tbsp mayonnaise (optional)",
+              "Salt and pepper to taste",
+              "Fresh basil leaves (for garnish)"
+            ],
+            "instructions": [
+              "Cut the tops off the tomatoes and scoop out the pulp (reserve for another use).",
+              "In a bowl, combine cooked rice, chopped hard-boiled egg, finely chopped broccoli, mayonnaise (if using), salt, and pepper. Mix well.",
+              "Fill the hollowed-out tomatoes with the rice and egg mixture.",
+              "Garnish with fresh basil leaves.",
+              "Serve chilled or at room temperature."
+            ],
+            "cookingTime": "20 minutes",
+            "difficulty": "Easy",
+            "nutrition": {
+              "calories": 200,
+              "protein": "8g",
+              "carbs": "25g"
+            }
+          }
+        ],
+        "recipe_count": 3,
+        "success": true
+      },
+      "metadata": {
+        "error_message": null,
+        "processing_status": "success"
+      }
+    },
+    {
+      "interaction_id": "recipe_interaction_20250828_160605",
+      "timestamp": "2025-08-28T16:06:05.477899",
+      "user_input": {
+        "ingredients": [
+          "chicken",
+          "rice",
+          "vegetables"
+        ],
+        "ingredient_count": 3
+      },
+      "llm_interaction": {
+        "raw_response": "```json\n{\n  \"recipes\": [\n    {\n      \"name\": \"Chicken and Vegetable Rice Bowl with Peanut Sauce\",\n      \"ingredients\": [\"Chicken breast\", \"Brown rice\", \"Broccoli florets\", \"Carrots\", \"Bell peppers (red and yellow)\", \"Peanut butter\", \"Soy sauce\", \"Honey\", \"Lime juice\", \"Garlic\", \"Ginger\", \"Sriracha (optional)\", \"Sesame oil\", \"Green onions (for garnish)\", \"Sesame seeds (for garnish)\"],\n      \"instructions\": [\"Cook brown rice according to package directions.\", \"Cut chicken breast into bite-sized pieces and stir-fry in sesame oil until cooked through.\", \"Steam or stir-fry broccoli, carrots, and bell peppers until tender-crisp.\", \"Prepare peanut sauce: Whisk together peanut butter, soy sauce, honey, lime juice, minced garlic, grated ginger, and sriracha (if using). Add water to thin to desired consistency.\", \"Assemble bowls: Layer cooked rice, chicken, and vegetables. Drizzle with peanut sauce. Garnish with green onions and sesame seeds.\"],\n      \"cookingTime\": \"35 minutes\",\n      \"difficulty\": \"Easy\",\n      \"nutrition\": {\n        \"calories\": 550,\n        \"protein\": \"35g\",\n        \"carbs\": \"60g\"\n      }\n    },\n    {\n      \"name\": \"Chicken and Vegetable Fried Rice with Egg\",\n      \"ingredients\": [\"Chicken thighs\", \"Cooked rice (day-old recommended)\", \"Frozen peas\", \"Frozen corn\", \"Diced carrots\", \"Onion\", \"Garlic\", \"Eggs\", \"Soy sauce\", \"Sesame oil\", \"Vegetable oil\", \"Scallions (for garnish)\", \"Ginger (optional)\"],\n      \"instructions\": [\"Dice chicken thighs and stir-fry in vegetable oil until cooked through. Set aside.\", \"Scramble eggs in a separate pan and set aside.\", \"In the same pan, stir-fry diced onion and garlic until fragrant. Add carrots, peas, and corn and cook until heated through.\", \"Add cooked rice to the pan and break it up with a spatula.\", \"Pour in soy sauce and sesame oil and stir-fry until rice is evenly coated.\", \"Add cooked chicken and scrambled eggs back to the pan and stir to combine.\", \"Garnish with chopped scallions and ginger (optional) before serving.\"],\n      \"cookingTime\": \"25 minutes\",\n      \"difficulty\": \"Medium\",\n      \"nutrition\": {\n        \"calories\": 480,\n        \"protein\": \"28g\",\n        \"carbs\": \"55g\"\n      }\n    }\n  ]\n}\n```",
+        "response_length": 2192,
+        "response_type": "str"
+      },
+      "parsed_output": {
+        "recipes": [
+          {
+            "name": "Chicken and Vegetable Rice Bowl with Peanut Sauce",
+            "ingredients": [
+              "Chicken breast",
+              "Brown rice",
+              "Broccoli florets",
+              "Carrots",
+              "Bell peppers (red and yellow)",
+              "Peanut butter",
+              "Soy sauce",
+              "Honey",
+              "Lime juice",
+              "Garlic",
+              "Ginger",
+              "Sriracha (optional)",
+              "Sesame oil",
+              "Green onions (for garnish)",
+              "Sesame seeds (for garnish)"
+            ],
+            "instructions": [
+              "Cook brown rice according to package directions.",
+              "Cut chicken breast into bite-sized pieces and stir-fry in sesame oil until cooked through.",
+              "Steam or stir-fry broccoli, carrots, and bell peppers until tender-crisp.",
+              "Prepare peanut sauce: Whisk together peanut butter, soy sauce, honey, lime juice, minced garlic, grated ginger, and sriracha (if using). Add water to thin to desired consistency.",
+              "Assemble bowls: Layer cooked rice, chicken, and vegetables. Drizzle with peanut sauce. Garnish with green onions and sesame seeds."
+            ],
+            "cookingTime": "35 minutes",
+            "difficulty": "Easy",
+            "nutrition": {
+              "calories": 550,
+              "protein": "35g",
+              "carbs": "60g"
+            }
+          },
+          {
+            "name": "Chicken and Vegetable Fried Rice with Egg",
+            "ingredients": [
+              "Chicken thighs",
+              "Cooked rice (day-old recommended)",
+              "Frozen peas",
+              "Frozen corn",
+              "Diced carrots",
+              "Onion",
+              "Garlic",
+              "Eggs",
+              "Soy sauce",
+              "Sesame oil",
+              "Vegetable oil",
+              "Scallions (for garnish)",
+              "Ginger (optional)"
+            ],
+            "instructions": [
+              "Dice chicken thighs and stir-fry in vegetable oil until cooked through. Set aside.",
+              "Scramble eggs in a separate pan and set aside.",
+              "In the same pan, stir-fry diced onion and garlic until fragrant. Add carrots, peas, and corn and cook until heated through.",
+              "Add cooked rice to the pan and break it up with a spatula.",
+              "Pour in soy sauce and sesame oil and stir-fry until rice is evenly coated.",
+              "Add cooked chicken and scrambled eggs back to the pan and stir to combine.",
+              "Garnish with chopped scallions and ginger (optional) before serving."
+            ],
+            "cookingTime": "25 minutes",
+            "difficulty": "Medium",
+            "nutrition": {
+              "calories": 480,
+              "protein": "28g",
+              "carbs": "55g"
+            }
+          }
+        ],
+        "recipe_count": 2,
+        "success": true
+      },
+      "metadata": {
+        "error_message": null,
+        "processing_status": "success"
+      }
+    },
+    {
+      "interaction_id": "recipe_interaction_20250828_160623",
+      "timestamp": "2025-08-28T16:06:23.754140",
+      "user_input": {
+        "ingredients": [
+          "eggs",
+          "milk",
+          "bread",
+          "cheese"
+        ],
+        "ingredient_count": 4
+      },
+      "llm_interaction": {
+        "raw_response": "```json\n{\n  \"recipes\": [\n    {\n      \"name\": \"Savory Bread Pudding with Gruyere and Ham\",\n      \"ingredients\": [\"eggs\", \"milk\", \"bread (stale preferred)\", \"Gruyere cheese\", \"ham (diced)\", \"onion (diced)\", \"butter\", \"Dijon mustard\", \"salt\", \"pepper\", \"fresh thyme (optional)\"],\n      \"instructions\": [\"Preheat oven to 350°F (175°C). Grease a baking dish.\", \"Saute diced onion in butter until softened. Mix with diced ham.\", \"Whisk together eggs, milk, Dijon mustard, salt, and pepper.\", \"Cut bread into 1-inch cubes. Toss with onion and ham mixture.\", \"Layer bread mixture and shredded Gruyere cheese in the baking dish.\", \"Pour egg mixture over bread and cheese. Press down gently to ensure bread is soaked.\", \"Sprinkle with fresh thyme (if using).\", \"Bake for 45-50 minutes, or until golden brown and set. Let cool slightly before serving.\"],\n      \"cookingTime\": \"55 minutes\",\n      \"difficulty\": \"Medium\",\n      \"nutrition\": {\n        \"calories\": 450,\n        \"protein\": \"25g\",\n        \"carbs\": \"35g\"\n      }\n    },\n    {\n      \"name\": \"Monte Cristo French Toast Casserole\",\n      \"ingredients\": [\"eggs\", \"milk\", \"bread (challah or brioche preferred)\", \"Swiss cheese (sliced)\", \"ham (sliced)\", \"powdered sugar (for dusting)\", \"butter\", \"strawberry jam (for serving)\", \"vanilla extract\"],\n      \"instructions\": [\"Whisk together eggs, milk, and vanilla extract.\", \"Spread butter on one side of each slice of bread. Assemble sandwiches with ham and Swiss cheese.\", \"Cut each sandwich in half diagonally.\", \"Dip each sandwich half into the egg mixture, ensuring both sides are coated.\", \"Grease a baking dish. Arrange sandwich halves in the dish.\", \"Pour any remaining egg mixture over the sandwiches.\", \"Cover and refrigerate for at least 30 minutes, or up to overnight.\", \"Preheat oven to 350°F (175°C). Bake uncovered for 25-30 minutes, or until golden brown and set.\", \"Dust with powdered sugar and serve with strawberry jam.\"],\n      \"cookingTime\": \"35 minutes (plus refrigeration)\",\n      \"difficulty\": \"Easy\",\n      \"nutrition\": {\n        \"calories\": 520,\n        \"protein\": \"28g\",\n        \"carbs\": \"45g\"\n      }\n    },\n    {\n      \"name\": \"Cheesy Egg & Bread Breakfast Bake\",\n      \"ingredients\": [\"eggs\", \"milk\", \"bread (cubed)\", \"cheddar cheese (shredded)\", \"cooked sausage (crumbled)\", \"green onions (chopped)\", \"salt\", \"pepper\", \"butter or cooking spray\"],\n      \"instructions\": [\"Preheat oven to 375°F (190°C). Grease a 9x13 inch baking dish.\", \"In a large bowl, whisk together eggs, milk, salt, and pepper.\", \"Add cubed bread, shredded cheddar cheese, crumbled sausage, and chopped green onions to the egg mixture. Stir to combine thoroughly.\", \"Pour the mixture into the prepared baking dish.\", \"Bake for 30-35 minutes, or until the egg is set and the top is golden brown.\", \"Let cool slightly before serving. Garnish with extra green onions if desired.\"],\n      \"cookingTime\": \"40 minutes\",\n      \"difficulty\": \"Easy\",\n      \"nutrition\": {\n        \"calories\": 400,\n        \"protein\": \"22g\",\n        \"carbs\": \"28g\"\n      }\n    }\n  ]\n}\n```",
+        "response_length": 3052,
+        "response_type": "str"
+      },
+      "parsed_output": {
+        "recipes": [
+          {
+            "name": "Savory Bread Pudding with Gruyere and Ham",
+            "ingredients": [
+              "eggs",
+              "milk",
+              "bread (stale preferred)",
+              "Gruyere cheese",
+              "ham (diced)",
+              "onion (diced)",
+              "butter",
+              "Dijon mustard",
+              "salt",
+              "pepper",
+              "fresh thyme (optional)"
+            ],
+            "instructions": [
+              "Preheat oven to 350°F (175°C). Grease a baking dish.",
+              "Saute diced onion in butter until softened. Mix with diced ham.",
+              "Whisk together eggs, milk, Dijon mustard, salt, and pepper.",
+              "Cut bread into 1-inch cubes. Toss with onion and ham mixture.",
+              "Layer bread mixture and shredded Gruyere cheese in the baking dish.",
+              "Pour egg mixture over bread and cheese. Press down gently to ensure bread is soaked.",
+              "Sprinkle with fresh thyme (if using).",
+              "Bake for 45-50 minutes, or until golden brown and set. Let cool slightly before serving."
+            ],
+            "cookingTime": "55 minutes",
+            "difficulty": "Medium",
+            "nutrition": {
+              "calories": 450,
+              "protein": "25g",
+              "carbs": "35g"
+            }
+          },
+          {
+            "name": "Monte Cristo French Toast Casserole",
+            "ingredients": [
+              "eggs",
+              "milk",
+              "bread (challah or brioche preferred)",
+              "Swiss cheese (sliced)",
+              "ham (sliced)",
+              "powdered sugar (for dusting)",
+              "butter",
+              "strawberry jam (for serving)",
+              "vanilla extract"
+            ],
+            "instructions": [
+              "Whisk together eggs, milk, and vanilla extract.",
+              "Spread butter on one side of each slice of bread. Assemble sandwiches with ham and Swiss cheese.",
+              "Cut each sandwich in half diagonally.",
+              "Dip each sandwich half into the egg mixture, ensuring both sides are coated.",
+              "Grease a baking dish. Arrange sandwich halves in the dish.",
+              "Pour any remaining egg mixture over the sandwiches.",
+              "Cover and refrigerate for at least 30 minutes, or up to overnight.",
+              "Preheat oven to 350°F (175°C). Bake uncovered for 25-30 minutes, or until golden brown and set.",
+              "Dust with powdered sugar and serve with strawberry jam."
+            ],
+            "cookingTime": "35 minutes (plus refrigeration)",
+            "difficulty": "Easy",
+            "nutrition": {
+              "calories": 520,
+              "protein": "28g",
+              "carbs": "45g"
+            }
+          },
+          {
+            "name": "Cheesy Egg & Bread Breakfast Bake",
+            "ingredients": [
+              "eggs",
+              "milk",
+              "bread (cubed)",
+              "cheddar cheese (shredded)",
+              "cooked sausage (crumbled)",
+              "green onions (chopped)",
+              "salt",
+              "pepper",
+              "butter or cooking spray"
+            ],
+            "instructions": [
+              "Preheat oven to 375°F (190°C). Grease a 9x13 inch baking dish.",
+              "In a large bowl, whisk together eggs, milk, salt, and pepper.",
+              "Add cubed bread, shredded cheddar cheese, crumbled sausage, and chopped green onions to the egg mixture. Stir to combine thoroughly.",
+              "Pour the mixture into the prepared baking dish.",
+              "Bake for 30-35 minutes, or until the egg is set and the top is golden brown.",
+              "Let cool slightly before serving. Garnish with extra green onions if desired."
+            ],
+            "cookingTime": "40 minutes",
+            "difficulty": "Easy",
+            "nutrition": {
+              "calories": 400,
+              "protein": "22g",
+              "carbs": "28g"
+            }
+          }
+        ],
+        "recipe_count": 3,
+        "success": true
+      },
+      "metadata": {
+        "error_message": null,
+        "processing_status": "success"
+      }
     }
   ]
 }
