@@ -1,0 +1,217 @@
+{
+  "interactions": [
+    {
+      "interaction_id": "recipe_interaction_20250828_155338",
+      "timestamp": "2025-08-28T15:53:38.401332",
+      "user_input": {
+        "ingredients": [
+          "spageti",
+          "carbonara paste",
+          "egg"
+        ],
+        "ingredient_count": 3
+      },
+      "llm_interaction": {
+        "raw_response": "```json\n{\n  \"recipes\": [\n    {\n      \"name\": \"Carbonara Frittata with Spaghetti Nests\",\n      \"ingredients\": [\"spaghetti\", \"carbonara paste\", \"egg\", \"parmesan cheese (optional)\", \"chopped parsley (optional)\", \"olive oil\"],\n      \"instructions\": [\n        \"Cook spaghetti according to package directions. Drain and toss with a tablespoon of olive oil to prevent sticking.\",\n        \"In a bowl, whisk eggs with carbonara paste until smooth. Season with salt and pepper to taste.\",\n        \"Arrange spaghetti into small 'nests' in a lightly oiled skillet.\",\n        \"Pour the egg mixture over the spaghetti nests, ensuring it fills the spaces between them.\",\n        \"Cook over medium-low heat for 10-15 minutes, or until the frittata is set but still slightly soft in the center.\",\n        \"Optional: Sprinkle with parmesan cheese and chopped parsley before serving. You can also finish under the broiler for a minute or two to brown the top.\"\n      ],\n      \"cookingTime\": \"25 minutes\",\n      \"difficulty\": \"Easy\",\n      \"nutrition\": {\n        \"calories\": 450,\n        \"protein\": \"20g\",\n        \"carbs\": \"45g\"\n      }\n    },\n    {\n      \"name\": \"Spaghetti Carbonara Egg Drop Soup\",\n      \"ingredients\": [\"spaghetti\", \"carbonara paste\", \"egg\", \"chicken broth\", \"green onions (optional)\", \"soy sauce (optional)\", \"sesame oil (optional)\"],\n      \"instructions\": [\n        \"Cook spaghetti according to package directions. Cut or break into smaller, bite-sized pieces.\",\n        \"Heat chicken broth in a pot until simmering.\",\n        \"Whisk carbonara paste with a small amount of warm broth until smooth. Gradually add to the simmering broth, stirring constantly.\",\n        \"Bring the soup back to a gentle simmer. Taste and adjust seasoning with salt, pepper, and optional soy sauce.\",\n        \"Slowly drizzle a beaten egg into the simmering soup while stirring gently to create egg ribbons.\",\n        \"Add the cooked spaghetti to the soup and heat through.\",\n        \"Optional: Garnish with chopped green onions and a drizzle of sesame oil before serving.\"\n      ],\n      \"cookingTime\": \"20 minutes\",\n      \"difficulty\": \"Easy\",\n      \"nutrition\": {\n        \"calories\": 380,\n        \"protein\": \"18g\",\n        \"carbs\": \"35g\"\n      }\n    },\n    {\n      \"name\": \"Deconstructed Carbonara Spaghetti Omelette\",\n      \"ingredients\": [\"spaghetti\", \"carbonara paste\", \"egg\", \"butter\", \"black pepper\", \"pecorino romano cheese (optional)\"],\n      \"instructions\": [\n        \"Cook spaghetti according to package directions. Drain well.\",\n        \"In a bowl, whisk eggs with a spoonful of carbonara paste per egg. Season generously with black pepper.\",\n        \"Melt butter in a non-stick skillet over medium heat.\",\n        \"Pour the egg mixture into the skillet. Cook for a few minutes, allowing the bottom to set.\",\n        \"Scatter cooked spaghetti evenly over the partially cooked omelette.\",\n        \"Continue cooking until the omelette is mostly set, but the top is still slightly moist. You can carefully flip the omelette or finish it under the broiler for a minute or two.\",\n        \"Slide the omelette onto a plate and optionally grate pecorino romano cheese over the top.\"\n      ],\n      \"cookingTime\": \"15 minutes\",\n      \"difficulty\": \"Medium\",\n      \"nutrition\": {\n        \"calories\": 500,\n        \"protein\": \"22g\",\n        \"carbs\": \"40g\"\n      }\n    }\n  ]\n}\n```",
+        "response_length": 3360,
+        "response_type": "str"
+      },
+      "parsed_output": {
+        "recipes": [
+          {
+            "name": "Carbonara Frittata with Spaghetti Nests",
+            "ingredients": [
+              "spaghetti",
+              "carbonara paste",
+              "egg",
+              "parmesan cheese (optional)",
+              "chopped parsley (optional)",
+              "olive oil"
+            ],
+            "instructions": [
+              "Cook spaghetti according to package directions. Drain and toss with a tablespoon of olive oil to prevent sticking.",
+              "In a bowl, whisk eggs with carbonara paste until smooth. Season with salt and pepper to taste.",
+              "Arrange spaghetti into small 'nests' in a lightly oiled skillet.",
+              "Pour the egg mixture over the spaghetti nests, ensuring it fills the spaces between them.",
+              "Cook over medium-low heat for 10-15 minutes, or until the frittata is set but still slightly soft in the center.",
+              "Optional: Sprinkle with parmesan cheese and chopped parsley before serving. You can also finish under the broiler for a minute or two to brown the top."
+            ],
+            "cookingTime": "25 minutes",
+            "difficulty": "Easy",
+            "nutrition": {
+              "calories": 450,
+              "protein": "20g",
+              "carbs": "45g"
+            }
+          },
+          {
+            "name": "Spaghetti Carbonara Egg Drop Soup",
+            "ingredients": [
+              "spaghetti",
+              "carbonara paste",
+              "egg",
+              "chicken broth",
+              "green onions (optional)",
+              "soy sauce (optional)",
+              "sesame oil (optional)"
+            ],
+            "instructions": [
+              "Cook spaghetti according to package directions. Cut or break into smaller, bite-sized pieces.",
+              "Heat chicken broth in a pot until simmering.",
+              "Whisk carbonara paste with a small amount of warm broth until smooth. Gradually add to the simmering broth, stirring constantly.",
+              "Bring the soup back to a gentle simmer. Taste and adjust seasoning with salt, pepper, and optional soy sauce.",
+              "Slowly drizzle a beaten egg into the simmering soup while stirring gently to create egg ribbons.",
+              "Add the cooked spaghetti to the soup and heat through.",
+              "Optional: Garnish with chopped green onions and a drizzle of sesame oil before serving."
+            ],
+            "cookingTime": "20 minutes",
+            "difficulty": "Easy",
+            "nutrition": {
+              "calories": 380,
+              "protein": "18g",
+              "carbs": "35g"
+            }
+          },
+          {
+            "name": "Deconstructed Carbonara Spaghetti Omelette",
+            "ingredients": [
+              "spaghetti",
+              "carbonara paste",
+              "egg",
+              "butter",
+              "black pepper",
+              "pecorino romano cheese (optional)"
+            ],
+            "instructions": [
+              "Cook spaghetti according to package directions. Drain well.",
+              "In a bowl, whisk eggs with a spoonful of carbonara paste per egg. Season generously with black pepper.",
+              "Melt butter in a non-stick skillet over medium heat.",
+              "Pour the egg mixture into the skillet. Cook for a few minutes, allowing the bottom to set.",
+              "Scatter cooked spaghetti evenly over the partially cooked omelette.",
+              "Continue cooking until the omelette is mostly set, but the top is still slightly moist. You can carefully flip the omelette or finish it under the broiler for a minute or two.",
+              "Slide the omelette onto a plate and optionally grate pecorino romano cheese over the top."
+            ],
+            "cookingTime": "15 minutes",
+            "difficulty": "Medium",
+            "nutrition": {
+              "calories": 500,
+              "protein": "22g",
+              "carbs": "40g"
+            }
+          }
+        ],
+        "recipe_count": 3,
+        "success": true
+      },
+      "metadata": {
+        "error_message": null,
+        "processing_status": "success"
+      }
+    },
+    {
+      "interaction_id": "recipe_interaction_20250828_155343",
+      "timestamp": "2025-08-28T15:53:43.037363",
+      "user_input": {
+        "ingredients": [
+          "spageti",
+          "carbonara paste",
+          "egg"
+        ],
+        "ingredient_count": 3
+      },
+      "llm_interaction": {
+        "raw_response": "```json\n{\n  \"recipes\": [\n    {\n      \"name\": \"Carbonara Egg Drop Spaghetti Soup\",\n      \"ingredients\": [\"spaghetti\", \"carbonara paste\", \"egg\", \"chicken broth\", \"green onions\", \"Parmesan cheese\"],\n      \"instructions\": [\"Cook spaghetti according to package directions. Drain and set aside.\", \"Heat chicken broth in a pot. Add carbonara paste and stir until dissolved.\", \"Whisk eggs lightly in a bowl. Slowly drizzle into the simmering broth while stirring continuously to create egg ribbons.\", \"Add cooked spaghetti to the soup. Heat through.\", \"Garnish with chopped green onions and grated Parmesan cheese before serving.\"],\n      \"cookingTime\": \"20 minutes\",\n      \"difficulty\": \"Easy\",\n      \"nutrition\": {\n        \"calories\": 350,\n        \"protein\": \"18g\",\n        \"carbs\": \"40g\"\n      }\n    },\n    {\n      \"name\": \"Carbonara Frittata with Spaghetti Nest\",\n      \"ingredients\": [\"spaghetti\", \"carbonara paste\", \"egg\", \"milk\", \"spinach\", \"cherry tomatoes\", \"olive oil\"],\n      \"instructions\": [\"Cook spaghetti according to package directions. Drain and toss with a small amount of olive oil. Form the spaghetti into a nest shape in an oven-safe skillet.\", \"Whisk eggs with milk and carbonara paste. Season with salt and pepper.\", \"Sauté spinach and cherry tomatoes in a separate pan until slightly softened. Add to the egg mixture.\", \"Pour the egg mixture over the spaghetti nest.\", \"Bake in a preheated oven at 375°F (190°C) for 20-25 minutes, or until the frittata is set.\", \"Let cool slightly before slicing and serving.\"],\n      \"cookingTime\": \"40 minutes\",\n      \"difficulty\": \"Medium\",\n      \"nutrition\": {\n        \"calories\": 400,\n        \"protein\": \"22g\",\n        \"carbs\": \"35g\"\n      }\n    },\n    {\n      \"name\": \"Deconstructed Carbonara Scramble\",\n      \"ingredients\": [\"spaghetti\", \"carbonara paste\", \"egg\", \"butter\", \"bacon bits\", \"black pepper\", \"parsley\"],\n      \"instructions\": [\"Cook spaghetti according to package directions. Drain and set aside.\", \"Scramble eggs in a pan with butter until cooked but still slightly moist.\", \"Stir in carbonara paste and bacon bits into the scrambled eggs.\", \"Serve the carbonara scramble over a bed of spaghetti.\", \"Garnish with freshly ground black pepper and chopped parsley.\"],\n      \"cookingTime\": \"15 minutes\",\n      \"difficulty\": \"Easy\",\n      \"nutrition\": {\n        \"calories\": 450,\n        \"protein\": \"25g\",\n        \"carbs\": \"45g\"\n      }\n    }\n  ]\n}\n```",
+        "response_length": 2416,
+        "response_type": "str"
+      },
+      "parsed_output": {
+        "recipes": [
+          {
+            "name": "Carbonara Egg Drop Spaghetti Soup",
+            "ingredients": [
+              "spaghetti",
+              "carbonara paste",
+              "egg",
+              "chicken broth",
+              "green onions",
+              "Parmesan cheese"
+            ],
+            "instructions": [
+              "Cook spaghetti according to package directions. Drain and set aside.",
+              "Heat chicken broth in a pot. Add carbonara paste and stir until dissolved.",
+              "Whisk eggs lightly in a bowl. Slowly drizzle into the simmering broth while stirring continuously to create egg ribbons.",
+              "Add cooked spaghetti to the soup. Heat through.",
+              "Garnish with chopped green onions and grated Parmesan cheese before serving."
+            ],
+            "cookingTime": "20 minutes",
+            "difficulty": "Easy",
+            "nutrition": {
+              "calories": 350,
+              "protein": "18g",
+              "carbs": "40g"
+            }
+          },
+          {
+            "name": "Carbonara Frittata with Spaghetti Nest",
+            "ingredients": [
+              "spaghetti",
+              "carbonara paste",
+              "egg",
+              "milk",
+              "spinach",
+              "cherry tomatoes",
+              "olive oil"
+            ],
+            "instructions": [
+              "Cook spaghetti according to package directions. Drain and toss with a small amount of olive oil. Form the spaghetti into a nest shape in an oven-safe skillet.",
+              "Whisk eggs with milk and carbonara paste. Season with salt and pepper.",
+              "Sauté spinach and cherry tomatoes in a separate pan until slightly softened. Add to the egg mixture.",
+              "Pour the egg mixture over the spaghetti nest.",
+              "Bake in a preheated oven at 375°F (190°C) for 20-25 minutes, or until the frittata is set.",
+              "Let cool slightly before slicing and serving."
+            ],
+            "cookingTime": "40 minutes",
+            "difficulty": "Medium",
+            "nutrition": {
+              "calories": 400,
+              "protein": "22g",
+              "carbs": "35g"
+            }
+          },
+          {
+            "name": "Deconstructed Carbonara Scramble",
+            "ingredients": [
+              "spaghetti",
+              "carbonara paste",
+              "egg",
+              "butter",
+              "bacon bits",
+              "black pepper",
+              "parsley"
+            ],
+            "instructions": [
+              "Cook spaghetti according to package directions. Drain and set aside.",
+              "Scramble eggs in a pan with butter until cooked but still slightly moist.",
+              "Stir in carbonara paste and bacon bits into the scrambled eggs.",
+              "Serve the carbonara scramble over a bed of spaghetti.",
+              "Garnish with freshly ground black pepper and chopped parsley."
+            ],
+            "cookingTime": "15 minutes",
+            "difficulty": "Easy",
+            "nutrition": {
+              "calories": 450,
+              "protein": "25g",
+              "carbs": "45g"
+            }
+          }
+        ],
+        "recipe_count": 3,
+        "success": true
+      },
+      "metadata": {
+        "error_message": null,
+        "processing_status": "success"
+      }
+    }
+  ]
+}

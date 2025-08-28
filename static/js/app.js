@@ -88,12 +88,18 @@ class RecipeAnalyzer {
     }
 
     async generateRecipes(ingredients) {
+        // Log the ingredients being sent
+        console.log('🔍 Frontend - Ingredients to send:', ingredients);
+        
+        const requestBody = { ingredients };
+        console.log('📤 Frontend - Request body (JSON):', JSON.stringify(requestBody, null, 2));
+        
         const response = await fetch(`${this.apiBaseUrl}/api/recipes/generate`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ ingredients })
+            body: JSON.stringify(requestBody)
         });
 
         if (!response.ok) {
@@ -101,7 +107,12 @@ class RecipeAnalyzer {
             throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
         }
 
-        return await response.json();
+        const responseData = await response.json();
+        console.log('📥 Frontend - Response received:', responseData);
+        console.log('📊 Frontend - Response type:', typeof responseData);
+        console.log('📋 Frontend - Response keys:', Object.keys(responseData));
+        
+        return responseData;
     }
 
     handleRecipeResponse(response) {

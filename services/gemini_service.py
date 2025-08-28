@@ -3,6 +3,7 @@ import json
 import google.generativeai as genai
 from typing import List, Dict, Any
 from models import Recipe, RecipeResponse, ErrorResponse
+from services.storage_service import StorageService
 
 class GeminiService:
     """Service for interacting with Google Gemini AI"""
@@ -14,18 +15,36 @@ class GeminiService:
         
         genai.configure(api_key=api_key)
         self.model = genai.GenerativeModel('gemini-2.0-flash')
+        self.storage = StorageService()
         
     def generate_recipes(self, ingredients: List[str]) -> RecipeResponse:
         """Generate recipes using Gemini AI based on available ingredients"""
         try:
+            # Log the ingredients being sent to Gemini
+            print(f"🔍 GeminiService - Ingredients to process: {ingredients}")
+            print(f"📊 GeminiService - Ingredients type: {type(ingredients)}")
+            
             # Create structured prompt for consistent JSON output
             prompt = self._create_recipe_prompt(ingredients)
             
             # Generate response from Gemini
+            print(f"📤 GeminiService - Sending prompt to Gemini...")
             response = self.model.generate_content(prompt)
+            print(f"📥 GeminiService - Raw response from Gemini: {response.text}")
+            print(f"📊 GeminiService - Response type: {type(response.text)}")
             
             # Parse and validate the response
             recipes = self._parse_ai_response(response.text)
+            
+            # Store the successful interaction
+            interaction_id = self.storage.store_interaction(
+                user_ingredients=ingredients,
+                llm_response=response.text,
+                parsed_recipes=[recipe.dict() for recipe in recipes],
+                success=True
+            )
+            
+            print(f"💾 GeminiService - Stored interaction {interaction_id}")
             
             return RecipeResponse(
                 recipes=recipes,
@@ -34,6 +53,17 @@ class GeminiService:
             )
             
         except Exception as e:
+            # Store the failed interaction
+            interaction_id = self.storage.store_interaction(
+                user_ingredients=ingredients,
+                llm_response=str(e),
+                parsed_recipes=[],
+                success=False,
+                error_message=str(e)
+            )
+            
+            print(f"💾 GeminiService - Stored failed interaction {interaction_id}")
+            
             # Return error response if something goes wrong
             return RecipeResponse(
                 recipes=[],

@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 from models import RecipeRequest, RecipeResponse, ErrorResponse
 from services.recipe_service import RecipeService
+from services.storage_service import StorageService
 
 # Load environment variables
 load_dotenv()
@@ -29,6 +30,7 @@ app.add_middleware(
 
 # Initialize services
 recipe_service = RecipeService()
+storage_service = StorageService()
 
 # Mount static files
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -56,6 +58,12 @@ async def api_health_check():
 async def generate_recipes(request: RecipeRequest):
     """Generate recipes based on available ingredients"""
     try:
+        # Log the incoming request
+        print(f"🔍 Backend - Received request: {request}")
+        print(f"📥 Backend - Ingredients received: {request.ingredients}")
+        print(f"📊 Backend - Request type: {type(request)}")
+        print(f"📋 Backend - Request dict: {request.dict()}")
+        
         # Validate ingredients
         is_valid, error_message = recipe_service.validate_ingredients(request.ingredients)
         if not is_valid:
@@ -109,6 +117,39 @@ async def get_sample_recipes():
         success=True,
         message="Sample recipe for testing purposes"
     )
+
+@app.get("/api/interactions/all")
+async def get_all_interactions():
+    """Get all stored user interactions"""
+    interactions = storage_service.get_all_interactions()
+    return {
+        "interactions": interactions,
+        "total": len(interactions)
+    }
+
+@app.get("/api/interactions/recent")
+async def get_recent_interactions(limit: int = 10):
+    """Get recent user interactions"""
+    interactions = storage_service.get_recent_interactions(limit)
+    return {
+        "interactions": interactions,
+        "total": len(interactions),
+        "limit": limit
+    }
+
+@app.get("/api/interactions/stats")
+async def get_interaction_stats():
+    """Get statistics about stored interactions"""
+    stats = storage_service.get_storage_stats()
+    return stats
+
+@app.get("/api/interactions/{interaction_id}")
+async def get_interaction(interaction_id: str):
+    """Get a specific interaction by ID"""
+    interaction = storage_service.get_interaction_by_id(interaction_id)
+    if not interaction:
+        raise HTTPException(status_code=404, detail="Interaction not found")
+    return interaction
 
 @app.exception_handler(404)
 async def not_found_handler(request: Request, exc: HTTPException):
